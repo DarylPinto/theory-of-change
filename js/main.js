@@ -13,11 +13,12 @@ function parallax(){
 
 	var scroll_distance = $(document).scrollTop();
 	var distance_from_top = $(element).offset().top;
-	var parallax_offset = ( ( scroll_distance + distance_from_top ) / parallax_diminish).toString() + 'px';
+	var parallax_offset = ( ( scroll_distance + distance_from_top ) / parallax_diminish).toString();
+	var parallax_offset = Math.round(parallax_offset);
 
 	$(element).css('background-size', '110%');
-	$(element).css('background-position', 'center');
-	$(element).css('background-position-y', parallax_offset );
+	$(element).css('background-position-x', 'center');
+	$(element).css('background-position-y', parallax_offset + 'px' );
 }
 
 $(document).ready(function() {
@@ -27,4 +28,11 @@ $(document).ready(function() {
 $(window).scroll(function(){
 	moveElement('#bus', 2, [-280, 0]);
 	parallax();
+
+	if( $(document).scrollTop() > 185){
+		$('nav').css('opacity', '1');
+	}else{
+		$('nav').css('opacity', '0');
+	}
+
 });

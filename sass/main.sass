@@ -17,12 +17,20 @@ header
 		background: -ms-linear-gradient(top,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%)
 		background: linear-gradient(to bottom,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%)
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 )
+	.nav
+		background-image: url(../resources/images/header-banner-cropped.jpg)
+		text-shadow: 0 0 10px rgba(0,0,0,0.5)
+		background-size: 100%
+		background-size: cover
 	ul
-		position: absolute
+		position: fixed
 		top: 0
 		right: 0
-		margin-top: 10px
-		margin-right: 20px
+		text-align: right
+		padding: 20px
+		padding-top: 10px
+		width: 100%
+		+vendor(transition, .5s)
 	li
 		display: inline-block
 		color: white
@@ -54,3 +62,5 @@ main
 
 #bus, #land
 	+vendor(transition, 1s)
+
+	
