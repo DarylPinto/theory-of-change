@@ -7,23 +7,24 @@ function moveElement(element, speed, range){
 	}
 }
 
-function positionParallaxHeader(){
-	$('main').css('margin-top', $('header').height().toString() + 'px');
+function parallax(){
+	var parallax_diminish = 3;
+	var element = '.parallax';
 
-	if( $(document).scrollTop() > 70 ){
-		$('header').css({
-			'height': '70px',
-			'z-index': '30'
-		});
-	}
+	var scroll_distance = $(document).scrollTop();
+	var distance_from_top = $(element).offset().top;
+	var parallax_offset = ( ( scroll_distance + distance_from_top ) / parallax_diminish).toString() + 'px';
+
+	$(element).css('background-size', '110%');
+	$(element).css('background-position', 'center');
+	$(element).css('background-position-y', parallax_offset );
 }
 
 $(document).ready(function() {
-	positionParallaxHeader();
+	parallax();
 });
 
 $(window).scroll(function(){
 	moveElement('#bus', 2, [-280, 0]);
-	//moveElement('#land', 0.3, [-460, 0]);
-	positionParallaxHeader();
+	parallax();
 });
