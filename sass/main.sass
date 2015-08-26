@@ -1,0 +1,61 @@
+@import _default
+
+header
+	height: 250px
+	width: 100%
+	overflow: hidden
+	background-image: url(../resources/images/header-banner-cropped.jpg)
+	background-size: 100%
+	background-size: cover
+	position: fixed
+	top: 0
+	z-index: 10
+	.container
+		height: inherit
+		width: inherit
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%)
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0)))
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%)
+		background: -o-linear-gradient(top,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%)
+		background: -ms-linear-gradient(top,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%)
+		background: linear-gradient(to bottom,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 )
+	ul
+		position: absolute
+		top: 0
+		right: 0
+		margin-top: 10px
+		margin-right: 20px
+	li
+		display: inline-block
+		color: white
+		padding-left: 20px
+		padding-right: 20px
+		font-family: 'Source Sans Pro', sans-serif
+		font-size: 25px
+		font-weight: 800
+		color: white
+		&:first-child
+			padding-left: 0
+		&:last-child
+			padding-right: 0
+	a
+		color: white
+		text-decoration: none
+		border-bottom: 5px solid white
+		transition: .3s
+		&:hover
+			border-bottom: 5px solid transparent
+
+main
+	position: relative
+	background-color: white
+	z-index: 20
+	+vendor(transition, .5s)
+	svg
+		display: block
+		width: 1140px
+		margin: 0 auto
+
+#bus, #land
+	+vendor(transition, 1s)
