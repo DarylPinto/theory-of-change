@@ -1,0 +1,16 @@
+make all the outcomes slidein from the left and right
+make all elements fade in -100% opacity by middle of screen
+camera can jump once
+fonts?
+
+bus goes once - ease out
+
+checkmarks fade in - 100% opacity by middle\\
+
+laurel can fade in slightly after the circle around 'theory of change'
+
+half circles rotate out from behind the action plan
+
+text of action plan fade in after background
+
+ease on the page anchors (smooth scroll)
