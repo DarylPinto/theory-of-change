@@ -19,9 +19,6 @@ header {
   height: 250px;
   width: 100%;
   overflow: hidden;
-  background-image: url(../resources/images/header-banner-cropped.jpg);
-  background-size: 100%;
-  background-size: cover;
 }
 header .container {
   height: inherit;
