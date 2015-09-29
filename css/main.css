@@ -35,6 +35,13 @@ header .container {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0, 0, 0, 0.4)', endColorstr='transparent',GradientType=0 );
 }
+header #logo {
+  position: fixed;
+  top: 4px;
+  height: 50px;
+  left: 25px;
+  z-index: 40;
+}
 header .nav {
   background-image: url(../resources/images/header-banner-cropped.jpg);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
