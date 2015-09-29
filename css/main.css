@@ -137,6 +137,19 @@ main svg {
   transform: translate(350px);
 }
 
+#leftLaurel, #rightLaurel {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  -ms-opacity: 0;
+  -o-opacity: 0;
+  opacity: 0;
+}
+
 .overlay {
   display: none;
   opacity: 0;
