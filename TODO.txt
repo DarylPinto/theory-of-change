@@ -1,4 +1,5 @@
-make all the outcomes slidein from the left and right
+//make all the outcomes slidein from the left and right
+
 make all elements fade in -100% opacity by middle of screen
 camera can jump once
 fonts?

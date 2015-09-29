@@ -64,6 +64,17 @@ main
 #bus, #land
 	+vendor(transition, 1s)
 
+#Outcome1, #Outcome2, #Outcome3, #Outcome5, #Outcome6, #Outcome7
+	+vendor(transition, .5s)
+	
+.outcome-hidden-left
+	+vendor(transform, translate(-350px))
+
+.outcome-hidden-right
+	+vendor(transform, translate(350px))
+
+//Video overlay
+
 .overlay
 	display: none
 	opacity: 0
