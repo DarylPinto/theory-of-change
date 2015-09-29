@@ -1,4 +1,6 @@
-var video_source = $('.video-box').attr('src');
+var video_source = $('.video-player').attr('src');
+var documentScrollBottom = $(document).scrollTop() + $(window).height();
+var documentScrollMiddle = documentScrollBottom / 2;
 
 function moveElement(element, speed, range){
 	var distance =  -1 * ( $(document).scrollTop() / speed );
@@ -20,15 +22,15 @@ function hideVideo(){
 	$('.overlay').css('opacity', '0');
 	window.setTimeout(function(){
 		$('.overlay').css('display', 'none');
-		$('.video-box').attr('src', '');
-	}, 600);
+		$('.video-player').attr('src', '');
+	}, 700);
 }
 
 function showVideo(){
 	$('.overlay').css('display', 'block');	
 	window.setTimeout(function(){
 		$('.overlay').css('opacity', '1');
-		$('.video-box').attr('src', video_source + '?autoplay=1');
+		$('.video-player').attr('src', video_source + '?autoplay=1');
 	}, 25);
 }
 
@@ -37,12 +39,12 @@ function resizeVideo(){
 	var videoHeight = videoWidth * (9/16); //Video height is 9 out of 16 x the width
 
 	if( videoHeight < ($(window).height() - 30) ){ //If video height is less than viewport height, resize the video
-		$('.video-box').css('width', videoWidth.toString() + 'px');
-		$('.video-box').css('height', videoHeight.toString() + 'px');
+		$('.video-player').css('width', videoWidth.toString() + 'px');
+		$('.video-player').css('height', videoHeight.toString() + 'px');
 	}
 
 	//Vertically center video
-	$('.video-box').css('top', ($(window).height()/2) - ($('.video-box').height()/2));
+	$('.video-player').css('top', ($(window).height()/2) - ($('.video-player').height()/2));
 }
 
 $(document).ready(function() {
