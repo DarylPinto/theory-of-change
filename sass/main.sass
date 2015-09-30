@@ -64,6 +64,8 @@ main
 		width: 1140px
 		margin: 0 auto
 
+//Dynamic elements
+
 #bus, #land
 	+vendor(transition, 1s)
 
@@ -91,6 +93,15 @@ main
 .connector2, .connector4
 	+vendor(transition, .5s)
 	+vendor(transform, translate(95px))
+
+.plan2016, .plan2017, .plan2018, .plan2019, .plan2020
+	+vendor(transition, .5s)
+	+vendor(opacity, 0)
+
+.plan-visible
+	+vendor(transition, .5s)
+	+vendor(opacity, 1)
+	+vendor(transform, translate(0))
 
 //Video overlay
 

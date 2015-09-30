@@ -105,6 +105,30 @@ function resizeVideo(){
 	$('.video-player').css('top', ($(window).height()/2) - ($('.video-player').height()/2));
 }
 
+function revealActionPlan(){
+
+	var speed = 175;
+
+	function delayAppear(el, delay){
+		window.setTimeout(function(){
+			$(el).attr('class', 'plan-visible')
+		}, delay);
+	}
+
+	if( $(document).scrollTop() >= $('#actionPlan').offset().top - 80 || documentScrollBottom >= $(document).height() - 30){
+		delayAppear('.plan2016', 100);
+		delayAppear('.connector1', 100 + speed);
+		delayAppear('.plan2017', 100 + (speed * 2) );
+		delayAppear('.connector2', 100 + (speed * 3) );
+		delayAppear('.plan2018', 100 + (speed * 4) );
+		delayAppear('.connector3', 100 + (speed * 5) );
+		delayAppear('.plan2019', 100 + (speed * 6) );
+		delayAppear('.connector4', 100 + (speed * 7) );
+		delayAppear('.plan2020', 100 + (speed * 8) );
+	}
+
+}
+
 $(document).ready(function() {
 	smoothScroll();
 	updateActivationPoints()
@@ -113,6 +137,7 @@ $(document).ready(function() {
 	fadeLaurels();
 	showInShort();
 	resizeVideo();
+	revealActionPlan();
 });
 
 $(window).scroll(function(){
@@ -122,6 +147,7 @@ $(window).scroll(function(){
 	showOutcomes();
 	fadeLaurels();
 	showInShort();
+	revealActionPlan();
 });
 
 $( window ).resize(function(){
