@@ -81,7 +81,7 @@ function showOutcomes(){
 }
 
 function showInShort(){
-	if(documentScrollMiddle > $('#inShort_line2').offset().top){
+	if( documentScrollMiddle >= $('#inShortJump_1_').offset().top - 80){
 		$('#inShort_group1').css('opacity', '1');		
 	}
 	if(documentScrollMiddle > $('#inShort_group2').offset().top){
