@@ -6,9 +6,6 @@ header
 	height: 250px
 	width: 100%
 	overflow: hidden
-	//background-image: url(../resources/images/header-banner-cropped.jpg)
-	//background-size: 100%
-	//background-size: cover
 	.container
 		height: inherit
 		width: inherit
@@ -86,6 +83,14 @@ main
 #inShort_group1, #inShort_group2, #inShort_group3, #inShort_line1, #inShort_line2
 	+vendor(transition, 1s)
 	+vendor(opacity, 0)
+
+.connector1, .connector3
+	+vendor(transition, .5s)
+	+vendor(transform, translate(-95px))
+
+.connector2, .connector4
+	+vendor(transition, .5s)
+	+vendor(transform, translate(95px))
 
 //Video overlay
 

@@ -109,6 +109,9 @@ $(document).ready(function() {
 	smoothScroll();
 	updateActivationPoints()
 	changeNavBackgroundColor();
+	showOutcomes();
+	fadeLaurels();
+	showInShort();
 	resizeVideo();
 });
 

@@ -167,6 +167,32 @@ main svg {
   opacity: 0;
 }
 
+.connector1, .connector3 {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translate(-95px);
+  -moz-transform: translate(-95px);
+  -ms-transform: translate(-95px);
+  -o-transform: translate(-95px);
+  transform: translate(-95px);
+}
+
+.connector2, .connector4 {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translate(95px);
+  -moz-transform: translate(95px);
+  -ms-transform: translate(95px);
+  -o-transform: translate(95px);
+  transform: translate(95px);
+}
+
 .overlay {
   display: none;
   opacity: 0;
