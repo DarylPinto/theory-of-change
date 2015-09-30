@@ -80,6 +80,18 @@ function showOutcomes(){
 	}
 }
 
+function showInShort(){
+	if(documentScrollMiddle > $('#inShort_line2').offset().top){
+		$('#inShort_group1').css('opacity', '1');		
+	}
+	if(documentScrollMiddle > $('#inShort_group2').offset().top){
+		$('#inShort_group2, #inShort_line2').css('opacity', '1');		
+	}
+	if(documentScrollMiddle > $('#inShort_group3').offset().top){
+		$('#inShort_group3, #inShort_line1').css('opacity', '1');		
+	}
+}
+
 function resizeVideo(){
 	var videoWidth = $(window).width() * 0.7; //Video width is 70% of viewport
 	var videoHeight = videoWidth * (9/16); //Video height is 9 out of 16 x the width
@@ -106,6 +118,7 @@ $(window).scroll(function(){
 	changeNavBackgroundColor();
 	showOutcomes();
 	fadeLaurels();
+	showInShort();
 });
 
 $( window ).resize(function(){
