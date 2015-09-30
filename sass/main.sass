@@ -6,13 +6,19 @@ header
 	height: 250px
 	width: 100%
 	overflow: hidden
-	background-image: url(../resources/images/header-banner-cropped.jpg)
-	background-size: 100%
-	background-size: cover
+	//background-image: url(../resources/images/header-banner-cropped.jpg)
+	//background-size: 100%
+	//background-size: cover
 	.container
 		height: inherit
 		width: inherit
 		+background-gradient(rgba(0,0,0,0.4), transparent)
+	#logo
+		position: fixed
+		top: 4px
+		height: 50px
+		left: 25px
+		z-index: 40
 	.nav
 		background-image: url(../resources/images/header-banner-cropped.jpg)
 		text-shadow: 0 0 10px rgba(0,0,0,0.5)
@@ -63,6 +69,21 @@ main
 
 #bus, #land
 	+vendor(transition, 1s)
+
+#Outcome1, #Outcome2, #Outcome3, #Outcome5, #Outcome6, #Outcome7
+	+vendor(transition, .5s)
+
+.outcome-hidden-left
+	+vendor(transform, translate(-350px))
+
+.outcome-hidden-right
+	+vendor(transform, translate(350px))
+
+#leftLaurel, #rightLaurel
+	+vendor(transition, .5s)
+	+vendor(opacity, 0)
+
+//Video overlay
 
 .overlay
 	display: none

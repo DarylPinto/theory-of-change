@@ -19,9 +19,6 @@ header {
   height: 250px;
   width: 100%;
   overflow: hidden;
-  background-image: url(../resources/images/header-banner-cropped.jpg);
-  background-size: 100%;
-  background-size: cover;
 }
 header .container {
   height: inherit;
@@ -34,6 +31,13 @@ header .container {
   background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, transparent 100%);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0, 0, 0, 0.4)', endColorstr='transparent',GradientType=0 );
+}
+header #logo {
+  position: fixed;
+  top: 4px;
+  height: 50px;
+  left: 25px;
+  z-index: 40;
 }
 header .nav {
   background-image: url(../resources/images/header-banner-cropped.jpg);
@@ -111,6 +115,43 @@ main svg {
   -ms-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
+}
+
+#Outcome1, #Outcome2, #Outcome3, #Outcome5, #Outcome6, #Outcome7 {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.outcome-hidden-left {
+  -webkit-transform: translate(-350px);
+  -moz-transform: translate(-350px);
+  -ms-transform: translate(-350px);
+  -o-transform: translate(-350px);
+  transform: translate(-350px);
+}
+
+.outcome-hidden-right {
+  -webkit-transform: translate(350px);
+  -moz-transform: translate(350px);
+  -ms-transform: translate(350px);
+  -o-transform: translate(350px);
+  transform: translate(350px);
+}
+
+#leftLaurel, #rightLaurel {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  -ms-opacity: 0;
+  -o-opacity: 0;
+  opacity: 0;
 }
 
 .overlay {

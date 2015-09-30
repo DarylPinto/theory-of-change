@@ -17,7 +17,7 @@
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script type="text/javascript" src="js/html5shiv.js"></script>
-	<script type="text/javascript" src="js/html5shiv-printshiv.js"></script>
+	<script type="text/javascript" src="js/parallax.js"></script>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,12 +26,13 @@
 </head>
 <body>
 
-	<header>
+	<header class="parallax-window" data-parallax="scroll" data-image-src="resources/images/header-banner-cropped.jpg">
 		<div class="container">
+			<a href="http://janeswalk.org/"><img src="resources/images/logo.png" id="logo"></a>
 			<nav>
 				<ul>
-					<li><a href="#inShort">short version</a></li>
-					<li><a href="#">action plan</a></li>
+					<li><a href="#inShortJump_1_">short version</a></li>
+					<li><a href="#actionPlan">action plan</a></li>
 					<li><a class="video-link">watch video</a></li>
 				</ul>
 			</nav>
@@ -17299,7 +17300,7 @@
 	</g>
 	<text transform="matrix(1 0 0 1 274.2397 409.4092)" fill="#00AEEF" font-family="'Source Sans Pro'" font-weight="700" font-size="13.2043">Greater Golden Horseshoe</text>
 </g>
-<g id="Outcome1">
+<g id="Outcome1" class="outcome-hidden-left">
 	<path id="bgBox" fill="#F7E2D8" d="M300.791,764.07c0,1.08-0.651,1.955-1.455,1.955H94.687c-0.804,0-1.455-0.875-1.455-1.955
 		V528.301c0-1.08,0.651-1.955,1.455-1.955h204.648c0.804,0,1.455,0.875,1.455,1.955V764.07z"/>
 	<rect id="titleBar" x="93.232" y="541.654" opacity="0.8" fill="#94DCF9" width="115.037" height="19.171"/>
@@ -17333,7 +17334,7 @@
 			C121.688,593.889,117.107,598.471,111.476,598.471z"/>
 	</g>
 </g>
-<g id="Outcome2">
+<g id="Outcome2" class="outcome-hidden-right">
 	<path fill="#F7E2D8" d="M1076.739,740.033c0,1.29-0.65,2.334-1.455,2.334H870.637c-0.804,0-1.456-1.044-1.456-2.334V512.634
 		c0-1.291,0.651-2.334,1.456-2.334h204.647c0.805,0,1.455,1.044,1.455,2.334V740.033z"/>
 	<rect x="875.664" y="525.83" opacity="0.8" fill="#94DCF9" width="115.038" height="19.172"/>
@@ -17358,7 +17359,7 @@
 	<polygon opacity="0.5" fill="#94DCF9" points="841.514,639.755 863.886,662.126 863.886,742.367 875.396,742.367 875.396,510.3 
 		863.886,510.3 863.886,617.383 	"/>
 </g>
-<g id="Outcome3">
+<g id="Outcome3" class="outcome-hidden-left">
 	<g>
 		<path fill="#F7E2D8" d="M300.791,1063.408c0,1.076-0.651,1.948-1.455,1.948H94.687c-0.804,0-1.455-0.872-1.455-1.948V854.812
 			c0-1.077,0.651-1.95,1.455-1.95h204.648c0.804,0,1.455,0.873,1.455,1.95V1063.408z"/>
@@ -17399,7 +17400,7 @@
 		<text transform="matrix(1 0 0 1 131.8779 882.5454)" fill="#304547" font-family="'Source Sans Pro'" font-weight="600" font-size="11.866">OUTCOMES</text>
 	</g>
 </g>
-<g id="Outcome5">
+<g id="Outcome5" class="outcome-hidden-right">
 	<path fill="#F7E2D8" d="M1076.739,1209.168c0,1.287-0.65,2.334-1.455,2.334H870.637c-0.804,0-1.456-1.047-1.456-2.334V855.198
 		c0-1.29,0.651-2.335,1.456-2.335h204.647c0.805,0,1.455,1.045,1.455,2.335V1209.168z"/>
 	<rect x="875.664" y="868.394" opacity="0.8" fill="#94DCF9" width="115.038" height="19.172"/>
@@ -17438,7 +17439,7 @@
 	<polygon opacity="0.5" fill="#94DCF9" points="841.514,982.318 863.886,1004.69 863.886,1211.502 875.396,1211.502 
 		875.396,852.862 863.886,852.862 863.886,959.946 	"/>
 </g>
-<g id="Outcome6">
+<g id="Outcome6" class="outcome-hidden-left">
 	<g>
 		<path fill="#F7E2D8" d="M300.791,1347.811c0,1.039-0.651,1.881-1.455,1.881H94.687c-0.804,0-1.455-0.842-1.455-1.881v-182.977
 			c0-1.041,0.651-1.881,1.455-1.881h204.648c0.804,0,1.455,0.84,1.455,1.881V1347.811z"/>
@@ -17458,7 +17459,7 @@
 		<text transform="matrix(1 0 0 1 131.8779 1192.6333)" fill="#304547" font-family="'Source Sans Pro'" font-weight="600" font-size="11.866">OUTCOMES</text>
 	</g>
 </g>
-<g id="Outcome7">
+<g id="Outcome7" class="outcome-hidden-left">
 	<g>
 		<path opacity="0.8" fill="none" stroke="#304547" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="4,4" d="
 			M219.958,1619.393"/>
