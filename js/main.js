@@ -18,6 +18,18 @@ function smoothScroll(){
   });
 }
 
+function resizeGraphic(){
+	if( $(document).width() > 1150){
+		var scale = 1;
+		while( $(document).width() <= $(window).width() ){
+			$('#infographic').css('transform', 'scale('+scale+')');
+			scale += 0.1;
+		}
+		scale -= 0.2;
+		$('#infographic').css('transform', 'scale('+scale+')');
+	}
+}
+
 function updateActivationPoints(){
 	documentScrollBottom = $(document).scrollTop() + $(window).height();
 	documentScrollMiddle = $(document).scrollTop() + ($(window).height() / 2);
@@ -44,9 +56,12 @@ function moveBus(){
 function changeNavBackgroundColor(){
 	if( $(document).scrollTop() > 185){
 		$('header nav ul').addClass('main-body-nav');
+		$('#logo').removeClass('larger-logo')
 	}else{
 		$('header nav ul').removeClass('main-body-nav');
+		$('#logo').addClass('larger-logo')
 	}
+
 }
 
 function hideVideo(){
@@ -115,7 +130,7 @@ function revealActionPlan(){
 		}, delay);
 	}
 
-	if( $(document).scrollTop() >= $('#actionPlan').offset().top - 80 || documentScrollBottom >= $(document).height() - 30){
+	if( documentScrollMiddle >= $('#actionPlan').offset().top - 80 || documentScrollBottom >= $(document).height() - 30){
 		delayAppear('.plan2016', 100);
 		delayAppear('.connector1', 100 + speed);
 		delayAppear('.plan2017', 100 + (speed * 2) );
@@ -130,6 +145,7 @@ function revealActionPlan(){
 }
 
 $(document).ready(function() {
+	resizeGraphic();
 	smoothScroll();
 	updateActivationPoints()
 	changeNavBackgroundColor();
@@ -151,6 +167,7 @@ $(window).scroll(function(){
 });
 
 $( window ).resize(function(){
+	resizeGraphic();
 	updateActivationPoints()
 	resizeVideo();
 });

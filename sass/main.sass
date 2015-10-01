@@ -16,6 +16,10 @@ header
 		height: 50px
 		left: 25px
 		z-index: 9
+		+vendor(transition, .5s)
+	.larger-logo
+		+vendor(transform, scale(1.3))
+		+vendor(transform-origin, 0 0)
 	.nav
 		background-image: url(../resources/images/header-banner-cropped.jpg)
 		text-shadow: 0 0 10px rgba(0,0,0,0.5)
@@ -27,6 +31,7 @@ header
 		top: 0
 		right: 0
 		text-align: right
+		z-index: 8
 		padding: 20px
 		padding-top: 10px
 		width: 100%
@@ -59,10 +64,13 @@ header
 main
 	background-color: white
 	+vendor(transition, .5s)
-	svg
+	#infographic
 		display: block
 		width: 1140px
 		margin: 0 auto
+		position: relative
+		z-index: 1
+		+vendor(transform-origin, top)
 
 //Dynamic elements
 
