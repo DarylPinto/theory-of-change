@@ -127,6 +127,11 @@ main #infographic {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
   -webkit-transform-origin: top;
   -moz-transform-origin: top;
   -ms-transform-origin: top;
@@ -167,11 +172,11 @@ main #infographic {
 }
 
 #leftLaurel, #rightLaurel {
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
   -webkit-opacity: 0;
   -moz-opacity: 0;
   -ms-opacity: 0;

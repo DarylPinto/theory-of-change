@@ -19,14 +19,14 @@ function smoothScroll(){
 }
 
 function resizeGraphic(){
-	if( $(document).width() > 1150){
-		var scale = 1;
-		while( $(document).width() <= $(window).width() ){
-			$('#infographic').css('transform', 'scale('+scale+')');
-			scale += 0.1;
-		}
-		scale -= 0.2;
+	var desired_width = $(window).width() - 2;
+	var grahpic_width = $('#infographic').width();
+	var scale = desired_width / grahpic_width;
+
+	if( $(window).width() > 1150 ){
 		$('#infographic').css('transform', 'scale('+scale+')');
+	}else{
+		$('#infographic').css('transform', 'scale(1)');	
 	}
 }
 

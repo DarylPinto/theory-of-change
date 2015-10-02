@@ -70,6 +70,7 @@ main
 		margin: 0 auto
 		position: relative
 		z-index: 1
+		+vendor(transition, .1s)
 		+vendor(transform-origin, top)
 
 //Dynamic elements
@@ -87,7 +88,7 @@ main
 	+vendor(transform, translate(350px))
 
 #leftLaurel, #rightLaurel
-	+vendor(transition, 0.5s)
+	+vendor(transition, 1s)
 	+vendor(opacity, 0)
 
 #inShort_group1, #inShort_group2, #inShort_group3, #inShort_line1, #inShort_line2
